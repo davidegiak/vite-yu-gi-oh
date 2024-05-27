@@ -1,5 +1,5 @@
 <script>
-import cards from '../data/cards.js'
+// import cards from '../data/cards.js'
 import Card from './Card.vue'
 export default {
     name:"CardList",
