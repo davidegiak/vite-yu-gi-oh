@@ -11,7 +11,7 @@ export default {
         }
     },
     mounted(){
-        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0").then(function (response) {
+        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=5").then(function (response) {
         // handle success
         // cards.personaggi = response .data.data.results;
         // console.log(response.data.data)
