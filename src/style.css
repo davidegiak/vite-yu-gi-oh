@@ -8,3 +8,13 @@ a{
   text-decoration: none;
   color: unset;
 }
+
+.myContainer{
+  width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: orange;
+}

@@ -2,7 +2,6 @@ import { reactive } from 'vue';
 
 let iMieiDati = reactive({
     dati: [
-        
         {
             name: "\"A\" Cell Breeding Device",
             type: "Spell Card",
