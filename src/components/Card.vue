@@ -10,5 +10,5 @@ export default {
 </script>
 
 <template>
-    <img :src="card.image_url" alt="">
+    <div>ciao</div>
 </template>
