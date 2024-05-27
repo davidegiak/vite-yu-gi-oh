@@ -3,8 +3,8 @@ import cards from '../data/cards.js'
 import Card from './Card.vue'
 export default {
     name:"CardList",
-    props:{
-
+    components:{
+        Card
     },
     data() {
         return{
@@ -15,5 +15,5 @@ export default {
 </script>
 
 <template>
-    <Card v-for="element in cards" :card="dati.card_immages"/>
+    <Card v-for="element in cards.dati" :card="dati.card_immages"/>
 </template>

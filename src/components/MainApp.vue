@@ -2,17 +2,17 @@
 import CardList from "./CardList.vue"
 export default {
     name:"MainApp",
-    props:{
-
+    :{
+        
     },
     data() {
         return{
-
         }
     }
 }
 </script>
 
 <template>
+    <div>ciao</div>
     <CardList/>
 </template>
