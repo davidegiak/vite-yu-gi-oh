@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         selecta(x) {
-            axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=&num=100&offset=0").then((r)=> {
+            axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=`${x}`&num=100&offset=0").then((r)=> {
                 this.cards.dati = r.data.data
             })
         }
