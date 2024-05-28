@@ -14,13 +14,13 @@ export default {
     },
     methods: {
         selecta(x) {
-            axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=`${x}`&num=100&offset=0").then((r)=> {
+            axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=" + `${x.archetype_name}` + "&num=100&offset=0").then((r)=> {
                 this.cards.dati = r.data.data
             })
         }
     },
     mounted(){
-        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0").then((response)=> {
+        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=alien&num=100&offset=0").then((response)=> {
         this.cards.dati = response.data.data
         console.log(cards);
 
@@ -44,8 +44,11 @@ export default {
     <HeaderApp />
     <div class="myContainer">
         <select name="select" id="select">
-            <option v-for="archetype in cards.archetipo" value=""> {{ archetype.archetype_name }} </option>
+            <option @click="selecta(archetype)" v-for="archetype in cards.archetipo" value=""> {{ archetype.archetype_name }} </option>
         </select>
+        <div>
+           <h3>Sono usciti {{ cards.dati.length }} risultati</h3>
+        </div>
     </div>
     <MainApp />
 </template>
@@ -54,5 +57,6 @@ export default {
     display: flex;
     align-items: end;
     transform: translateY(5rem);
+    justify-content: space-between;
 }
 </style>
