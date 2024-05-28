@@ -1,5 +1,5 @@
 <script>
-import CardList from "./CardList.vue"
+import CardList from "./CardList.vue";
 export default {
     name:"MainApp",
     components: {
@@ -9,15 +9,19 @@ export default {
         return{
         }
     },
-//     created() {
-//     axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0").then(risultato => {
-//       this.cards.data = risultato.data.results;
-//     });
-//   },
 
 }
 </script>
 
 <template>
-    <CardList/>
+    <main>
+        <CardList/>
+    </main>
 </template>
+
+<style>
+main {
+    background-color: orange;
+    padding-top: 5rem;
+}
+</style>

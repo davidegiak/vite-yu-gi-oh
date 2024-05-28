@@ -1,5 +1,11 @@
 import { reactive } from 'vue';
 
+let archetypeList = reactive({
+    archetipo:[
+
+    ],
+});
+
 let iMieiDati = reactive({
     dati: [
         // {
@@ -172,7 +178,7 @@ let iMieiDati = reactive({
         //             },
         //         ],
         // },
-    ]
+    ],
 });
 
-export default iMieiDati
+export default (iMieiDati, archetypeList)
