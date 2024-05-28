@@ -17,10 +17,10 @@ export default {
             axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=" + `${x.archetype_name}` + "&num=100&offset=0").then((r)=> {
                 this.cards.dati = r.data.data
             })
-        }
+        },
     },
     mounted(){
-        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=alien&num=100&offset=0").then((response)=> {
+        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0").then((response)=> {
         this.cards.dati = response.data.data
         console.log(cards);
 
@@ -33,7 +33,7 @@ export default {
     })
     axios.get("https://db.ygoprodeck.com/api/v7/archetypes.php").then((r)=> {
         this.cards.archetipo = r.data
-        console.log(cards.archetipo);
+        console.log(this.cards.archetipo);
   })
     }
 }
@@ -44,10 +44,11 @@ export default {
     <HeaderApp />
     <div class="myContainer">
         <select name="select" id="select">
+            <option value=""></option>
             <option @click="selecta(archetype)" v-for="archetype in cards.archetipo" value=""> {{ archetype.archetype_name }} </option>
         </select>
         <div>
-           <h3>Sono usciti {{ cards.dati.length }} risultati</h3>
+           <h3 v-if="cards.dati">Sono usciti {{ cards.dati.length }} risultati</h3>
         </div>
     </div>
     <MainApp />

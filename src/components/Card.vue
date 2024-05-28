@@ -4,8 +4,6 @@ export default {
     props:{
         card: String
     },
-    data() {
-    }
 }
 </script>
 
